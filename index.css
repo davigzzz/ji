@@ -1,19 +1,84 @@
 body, html {
     height: 100%;
     margin: 0;
+    letter-spacing: 6px;
 }
 
-.portada {
+/* portada teléfono */
+.portada{
     /* The image used */
     background-image: url("portada_movil.png");
 
     /* Full height */
     height: 100%; 
-    width: 100%;
-
+    max-width: 100%;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* menu transparente */
+.navbar{
+    background-color: transparent;
+}
 
+/* ji studio con linea */
+h6{
+    position: relative;
+    margin-left: 5.22vw;
+    padding-top: 46px;
+    color: #C09349;
+} 
+h6 span {
+    background-color: white;
+    padding-right: 10px;
+}
+h6:after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 11vw;
+    height: 0.5em;
+    border-top: 1px solid #6D6E71;
+    z-index: -1;
+}
+
+
+
+.datos{
+    letter-spacing: 5px;
+    padding-left: 5.22vw;
+    font-size: 15px;
+    padding-bottom: 33px;
+}
+
+.datos:nth-child(1){
+    padding-top: 74px;
+}
+.datos:nth-child(2){
+    
+}
+
+
+
+.direccion{
+    letter-spacing: 3px;
+    font-size: 13px;
+    padding-top: 22px;
+    line-height: 25px;
+}
+
+.contactos{
+    padding-top: 25px;
+    line-height: 27px;
+}
+
+
+
+
+
+.responsive {
+    max-width: 100%;
+    height: 100%;
+}
