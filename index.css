@@ -1,3 +1,11 @@
+@font-face {
+    font-family: gothamlight;
+    src: url("Gotham-Light.otf") format("opentype");
+}
+*{
+    font-family: gothamlight;
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -28,6 +36,7 @@ h6{
     margin-left: 5.22vw;
     padding-top: 46px;
     color: #C09349;
+    line-height: 24px;
 } 
 h6 span {
     background-color: white;
@@ -45,7 +54,7 @@ h6:after {
 }
 
 
-
+/* contenedor de datos x3 */
 .datos{
     letter-spacing: 5px;
     padding-left: 5.22vw;
@@ -56,12 +65,9 @@ h6:after {
 .datos:nth-child(1){
     padding-top: 74px;
 }
-.datos:nth-child(2){
-    
-}
 
 
-
+/* solo la direccion */
 .direccion{
     letter-spacing: 3px;
     font-size: 13px;
@@ -69,11 +75,78 @@ h6:after {
     line-height: 25px;
 }
 
+/* datos de email y numeros */
 .contactos{
     padding-top: 25px;
     line-height: 27px;
 }
 
+/* Formulario */
+.formulario{
+    padding-left: 5.22vw;
+}
+/* EDICION DEL FORMULARIO */
+input[type=text]{
+    width: 89%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid gray;
+    margin-bottom:2rem; 
+    font-size: 1rem;
+}
+/* BOTON DE FORMULARIO */
+input[type=submit]{
+    align-items: center;
+    align-content: center;
+    margin-top: 0rem;
+    font-size: 1rem;
+    margin-left: 36%;
+    border: 1px solid;
+    border-color:#C09349;
+    background: transparent;
+    cursor: pointer;  
+    margin-bottom: 58px;
+}
+
+.footer-movil{
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url("footer-movil.png");
+    height: 259px; 
+    max-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.diamante{   
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    transform: rotate(45deg);
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    border-color: #C09349;
+    margin-top: 59px;
+    display: flex;       
+}
+
+a{
+    color: white;
+}
+
+.letra{
+   
+    transform: rotate(-45deg);
+}
 
 
 
