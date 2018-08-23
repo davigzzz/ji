@@ -11,6 +11,147 @@ body, html {
     margin: 0;
     letter-spacing: 6px;
 }
+/* BARRA DE NAVEGACION */
+.topnav {
+    justify-content: space-between;
+    display: flex;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  /* propiedades */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+
+    color: #c19449;
+  }
+  
+  .topnav a.active {
+   
+    color: #c19449;
+  }
+  /* desaparecerlo en movil */
+  .topnav-right {    
+    display: none;
+  }
+
+  /* LOGO */
+  .logo{
+      
+    background-image: url("logo-principal.svg");
+    width: 32vw;
+    height: 25px;
+    margin: 2rem 2rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .logo:hover{
+    background-image: url("logo-principal-active.svg");
+}
+
+/* BOTON DE MENU */
+    /* contenedor */
+  .btn-menu{
+      margin: 1rem 2rem;
+  }
+  /* boton */
+  .btn-menu-svg{
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 11px;
+    padding: 20px 0;
+    margin-right: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* DIMENSIONES DEL LOGO Y MENU IPAD */
+  @media only screen and (min-width: 768px) and (max-width: 899px) {
+    .logo{
+        margin: 3rem 3rem;
+    }
+    .btn-menu-svg{
+        padding: 40px 0;
+    }
+  }
+
+  /* DESAPARECER MENU Y MOSTRAR BARRA DE NAVEGACION */
+@media only screen and (min-width: 900px){
+    .btn-menu{
+        display: none;
+    }
+    
+    .topnav-right{
+        display: block;
+        float: right;
+    }
+    .logo{
+        width: 17vw;
+    }
+}
+
+
+
+
+/* MENU */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    
+    right: 0px;
+    font-size: 60px;
+}
+
+/* TAMAÑO DE BOTON DE CERRADO DEL MENU */
+@media only screen and (min-width: 768px) and (max-width: 899px) {
+    .overlay .closebtn {
+        position: absolute;        
+        right: 45px;
+        font-size: 80px;
+    }
+  }
+
 
 /* portada teléfono */
 .portada{
@@ -25,12 +166,28 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* menu transparente */
-.navbar{
-    background-color: transparent;
+/* portada ipad */
+@media only screen and (min-width: 768px) and (max-width: 899px) {
+    .portada{
+        background-image: url("portada_ipad.png");
+    }
+} 
+/* portada lap */
+@media only screen and (min-width: 900px){
+    .portada{
+        background-image: url("portada_lap.png");
+    }
+}
+/* portada pantallas */
+@media only screen and (min-width: 1301px){
+    .portada{
+        background-image: url("portada_pantalla.jpg");
+       
+    }
 }
 
-/* ji studio con linea */
+
+/* ENCABEZADOS CON LINEA AL FINAL*/
 h6{
     position: relative;
     margin-left: 5.22vw;
@@ -52,9 +209,63 @@ h6:after {
     border-top: 1px solid #6D6E71;
     z-index: -1;
 }
+/* QUITAMOS EL SALTO DE LINEA DE IPAD E ADELANTE */
+@media only screen and (min-width: 768px){
+    h6 br{
+        display: none;
+    }
+}
+
+.contenedor-lap{
+    display:none;
+}
+
+@media only screen and (min-width: 900px){
+    .contenedor-movil{
+        display: none;
+    }
+    .contenedor-lap{
+        display: block;
+        padding-top: 100px;
+        /* padding-left: 2.8vw; */
+    }
+    h6{
+        margin-left: 6.5rem;
+    }
+}
 
 
-/* contenedor de datos x3 */
+/* DESCRIPCION DE JI STUDIO VISIBLE DE IPAD EN ADELANTE */
+.descripcion{
+    display: none;    
+}
+@media only screen and (min-width: 768px) and (max-width: 899px){
+    .descripcion{
+        display: block;
+        padding-left: 5.22vw;
+        text-align: justify;
+        padding-right: 16.7vw;
+        font-size: 15px;
+        letter-spacing: 2px;
+        padding-top: 67px;
+    }    
+}
+
+@media only screen and (min-width: 900px){
+    .descripcion{
+        display: block;
+        padding-left: 8.22vw;
+        text-align: justify;
+        padding-right: 16.7vw;
+        font-size: 15px;
+        letter-spacing: 2px;
+        padding-top: 38px;
+        padding-right: 40vw;
+    }
+}
+
+
+/* contenedor de datos (son 3) */
 .datos{
     letter-spacing: 5px;
     padding-left: 5.22vw;
@@ -75,15 +286,126 @@ h6:after {
     line-height: 25px;
 }
 
-/* datos de email y numeros */
+/*DATOS DE CONTACTO MOVIL */
 .contactos{
     padding-top: 25px;
     line-height: 27px;
 }
 
-/* Formulario */
+.contactos-ipad{
+    display: none;
+}
+
+.datos-grande{
+    display: none;
+}
+
+/* DATOS DE CONTACTO TABLET */
+@media only screen and (min-width: 768px) and (max-width: 899px){
+    .datos{
+        padding-left: 8.8vw;
+        padding-top: 90px;
+    }
+    .direccion{
+        letter-spacing: 2px;
+    }
+    .contactos{
+        display: none;
+    }
+
+    .contactos-ipad{
+        display: block;
+        padding-top: 40px;
+    }
+}
+
+/* DATOS DE CONTACTO LAPTOP*/
+@media only screen and (min-width: 900px) {
+    .datos-movil{
+        display: none;
+    }
+    .datos-grande{
+        display: block;
+        font-size: 12;
+        width: 100%;
+        padding-top: 100px;
+        padding-bottom: 110px;
+    }
+
+    .row{
+        width: 100%;
+    }
+
+    .datos-grande .row .col-md-4:nth-child(1) h5{
+        padding-left: 100px;
+    }
+
+    .dato-icono{
+        display: flex;
+        height: 55px;
+        padding-left: 3.4rem;
+    }
+
+    .icono{
+        background-image: url("direccion-icon.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 11px;
+        height: 29px;
+        margin-right: 2.2rem;
+        margin-top: .8rem;
+    }
+
+    .datos-grande .row .col-md-4:nth-child(2) .dato-icono .icono{
+        background-image: url("telefono-icon.svg");
+        background-size: 18px, 29px;
+        width: 20px;        
+    }
+    .datos-grande .row .col-md-4:nth-child(2) .dato-icono{
+        padding-left: 3rem;
+    }
+
+    .datos-grande .row .col-md-4:nth-child(2) h5{
+        padding-left: 6.39rem;
+    }
+
+    .datos-grande .row .col-md-4:nth-child(3) .dato-icono .icono{
+        background-image: url("correo-icon.svg");
+        background-size: 30px, 29px;
+        width: 30px;        
+    }
+    .datos-grande .row .col-md-4:nth-child(3) .dato-icono{
+        padding-left: 0rem;
+    }
+    .datos-grande .row .col-md-4:nth-child(3) h5{
+        padding-left: 4rem;
+    }
+
+    
+
+    .contactos-grande{
+
+        font-size: 15px;
+        letter-spacing: 0.160em;
+    }
+
+    
+
+}
+
+
+
+/* no mostrar los sillones de ipad para arriba */
+@media only screen and (min-width: 767px){
+    .imagen-sillones{
+        display: none;
+    }
+}
+
+/* Formulario MOVIL */
 .formulario{
     padding-left: 5.22vw;
+    margin-top: 3rem;
 }
 /* EDICION DEL FORMULARIO */
 input[type=text]{
@@ -109,6 +431,92 @@ input[type=submit]{
     margin-bottom: 58px;
 }
 
+.formulario-grande{
+    display: none;
+}
+
+/* FORMULARIO tablet */
+@media only screen and (min-width: 768px) and (max-width: 899px){
+    .formulario{
+        display: none;
+    }
+    .formulario-grande{
+        display: block;
+        padding-left: 5.88vw;
+        margin-top: 7rem;
+    }
+    .col-form{
+        float: left;
+        width: 45%;
+    }
+
+    .col-form input[type=text]{
+        width: 95%;
+    }
+
+    input[type=text]{
+        width: 88%;        
+    }
+
+    input[type=submit]{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+/* formulario laptop */
+@media only screen and (min-width: 900px) {
+    .formulario{
+        display: none;
+    }
+    .formulario-grande{
+        display: block;
+        
+        margin-left:9.5rem;
+        margin-right: 9.5rem;
+        margin-top: 7rem;
+
+    }
+    .col-form{
+        float: left;
+        width: 50%;
+    }
+
+    .col-form input[type=text]{
+        width: 82%;
+    }
+
+    input[type=text]{
+        width: 88%;        
+    }
+
+    input[type=submit]{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    input[type=submit]{
+        
+        margin-left: 0;
+        
+    }
+
+    .enviar{
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1899px){
+
+}
+
+
+/* Footer movil */
+
 .footer-movil{
     color: white;
     font-size: 12px;
@@ -124,7 +532,6 @@ input[type=submit]{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .diamante{   
     width: 25px;
     height: 25px;
@@ -138,18 +545,102 @@ input[type=submit]{
     margin-top: 59px;
     display: flex;       
 }
-
 a{
     color: white;
 }
-
 .letra{
-   
     transform: rotate(-45deg);
 }
 
+.footer-grande{
+    display: none;
+}
 
 
+/* Footer grande */
+@media only screen and (min-width: 768px){
+
+    .footer-movil{
+        display: none;
+    }
+
+.footer-grande{
+    display: flex;
+    /* height: 260px; */
+    background-image: url("footer-ipad.png");
+    color: white;
+    background-size: cover;
+    letter-spacing: 2px;
+}
+
+.col-izquierda{
+    font-size: .625rem;
+    flex-basis: 30%;
+    padding-left: 25px;
+    padding-top: 50px;
+}
+.col-izquierda p{
+    line-height: 1.7rem;
+    padding-top: 2rem;
+}
+
+.col-centro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-basis: 40%;
+}
+
+.flecha{
+    padding-top: 20px;
+}
+
+.regresar{
+    font-size: 12px;
+    padding-top: 35px;
+    letter-spacing: 1px;
+}
+.legal{
+    letter-spacing: 1px;
+    font-size: 8px;
+    padding-top: 4.3rem;
+}
+
+.col-derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-basis: 30%;
+    font-size: 6.5px;
+}
+
+p#ultimo{
+     padding-top: 2.3rem; 
+}
+
+.contacto-footer{
+    font-size: 10.5px;
+    justify-content: center;
+    padding-top: 16vw;
+    text-align: justify;
+
+}
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .col-izquierda{
+        padding-left: 4rem;
+    }
+    .contacto-footer{
+        padding-top: 110px;
+    }
+    p#ultimo{
+        padding-top: 50.5px;
+    }
+}
 
 .responsive {
     max-width: 100%;

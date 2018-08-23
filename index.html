@@ -15,68 +15,76 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Estilo custom -->
     <link rel="stylesheet" href="index.css">
     <!-- Fontawesome (íconos) -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-        <script src="index.js"></script>
+    <script src="index.js"></script>
 
 </head>
 
 <body>
 
-    <div class="portada">
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">JI STUDIO</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">NOSOTROS
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">PRODUCTOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACTO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">DISPREH</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fab fa-facebook-f fa-1.5x"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fab fa-google-plus-g fa-1.5x"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fab fa-linkedin-in fa-1.5x"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">HOME</a>
+            <a href="#">BIO</a>
+            <a href="#">PORTAFOLIO</a>
+            <a href="#">CONTACTO</a>
+        </div>
     </div>
 
-    <h6>
-        <span> JI STUDIO&reg;</span>
-    </h6>
+
+    <div class="portada">
+        
+        <div class="topnav">
+            <a href="#" class="logo"></a>
+            <div class="topnav-right">
+                <a href="#">HOME</a>
+                <a href="#">BIO</a>
+                <a href="#">PORTAFOLIO</a>
+                <a href="#" class="active">CONTACTO</a>
+                
+
+            </div>
+            <div class="btn-menu">
+                <img src="menu-icon.svg" alt="menu" onclick="openNav()" class="btn-menu-svg">
+                <!-- <span  style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span> -->
+            </div>
+        </div>
 
 
-    <!-- datos -->
-    <div>
+    </div>
+
+
+
+    <div class="contenedor-movil">
+        <h6>
+            <span> JI STUDIO&reg;</span>
+        </h6>
+    </div>
+
+    <div class="contenedor-lap">
+        <h6>
+            <span>PERMÍTENOS AYUDARTE</span>
+        </h6>
+    </div>
+
+    <!-- descripcion de ji, tablet en adelante -->
+    <div class="descripcion">
+        <p>
+            En JI STUDIO&reg; estaremos complacidos de atenderte. Nuestra calidad, experiencia, honestidad e innovación han hecho de
+            JI STUDIO&reg; un despacho sólido y confiable para el diseño, análisis y construcción de cualquier proyecto.
+        </p>
+    </div>
+
+    <!-- datos movil y ipad -->
+    <div class="datos-movil">
         <div class="datos">
             DIRECCIÓN
             <div class="direccion">
@@ -90,6 +98,10 @@
                 contacto@jistudio.com
                 <br> ventas@jistudio.com
             </div>
+            <div class="contactos-ipad">
+                contacto@jistudio.com | ventas@jistudio.com
+            </div>
+
         </div>
 
         <div class="datos">
@@ -98,48 +110,165 @@
                 MÓVIL.771 1530 249
                 <br>FIJO.5513206378
             </div>
+            <div class="contactos-ipad">
+                MÓVIL.771 1530 249 | FIJO.5513206378
+            </div>
+        </div>
+    </div>
+    <!-- datos laptop -->
+    <div class="datos-grande">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>
+                    DIRECCIÓN
+                </h5>
+                <div class="dato-icono">
+                    <div class="icono"></div>
+                    <div class="contactos-grande">JUSTO SIERRA 116-B
+                        <br> COL. PERIODISTA, PACHUCA,
+                        <br> HIDALGO, MÉXICO, 42060
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <h5>
+                    TELÉFONO
+                </h5>
+                <div class="dato-icono">
+                    <div class="icono"></div>
+                    <div class="contactos-grande">MÓVIL.771 1530 249
+                        <br> FIJO.5513206378
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5>E-MAIL</h5>
+                <div class="dato-icono">
+                    <div class="icono"></div>
+                    <div class="contactos-grande">contacto@jistudio.com
+                        <br> ventas@jistudio.com
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <img src="sillones_movil2.png" alt="sillones" class="img-fluid">
+    <!-- imagen de sillones solo en movil -->
+    <div class="imagen-sillones">
+        <img src="sillones_movil2.png" alt="sillones" class="img-fluid">
+    </div>
+
 
     <h6>
-        <span> TE CONTACTAMOS <br> A LA BREVEDAD </span>
+        <span> TE CONTACTAMOS
+            <br> A LA BREVEDAD </span>
     </h6>
 
+    <!-- formulario movil -->
     <form action="/forma.php" class="formulario">
         Nombre*
         <br>
         <input type="text" name="nombre" placeholder="">
-        <br>
-        Apellido
+        <br> Apellido
         <br>
         <input type="text" name="apellido" placeholder="">
-        <br>
-        Mail*
+        <br> Mail*
         <br>
         <input type="text" name="correo" id="" placeholder="">
-        <br>
-        Teléfono
+        <br> Teléfono
         <br>
         <input type="text" name="telefono" id="" placeholder="">
         <br>
         <br>
-
         <input type="submit" value="ENVIAR">
     </form>
 
-    <footer class="footer-movil">
-        <a href=""> <div class="diamante">
-                <div class="letra">T</div>
-            </div></a>
-       <br>
-        <div>REGRESAR A LA PARTE SUPERIOR
-                <br><br>+7711530249
-                <br>CONTACTO@JISTUDIO.COM</div>
+
+    <!-- formulario ipad y pantallas grandes -->
+    <form action="/forma.php" class="formulario-grande">
+        <div class="container">
+            <div class="row">
+                <div class="col-form">
+                    <label for="nombre">Nombre*</label>
+                    <input type="text" name="nombre" placeholder="">
+                </div>
+                <div class="col-form">
+                    <label for="nombre">Apellido*</label>
+                    <input type="text" name="apellido" placeholder="">
+                </div>
+            </div>
+        </div>
+        Mail*
+        <br>
+        <input type="text" name="correo" id="" placeholder="">
+        <br> Teléfono
+        <br>
+        <input type="text" name="telefono" id="" placeholder="">
+        <br>
+        <br>
+        <div class="enviar"><input type="submit" value="ENVIAR"></div>
         
+    </form>
+
+
+    <footer class="footer-movil">
+        <a href="">
+            <div class="diamante">
+                <div class="letra">T</div>
+            </div>
+        </a>
+        <br>
+        <div>REGRESAR A LA PARTE SUPERIOR
+            <br>
+            <br>+7711530249
+            <br>CONTACTO@JISTUDIO.COM</div>
+    </footer>
+
+
+    <footer class="footer-grande">
+        <div class="col-izquierda">
+            <h3>JI STUDIO</h3>
+            <p>
+                JISTUDIO, 2018
+                <br> JUSTO SIERRA 116-B
+                <br> COL.PERIODISTA, PACHUCA,
+                <br> HIDALGO, MÉXICO, 42060
+            </p>
+
+        </div>
+        <div class="col-centro">
+            <a href="">
+                <div class="diamante">
+                    <div class="letra">T</div>
+                </div>
+            </a>
+            <div class="regresar"> REGRESAR A LA PARTE SUPERIOR
+            </div>
+            <div class="legal">Copyright 2017 JISTUDIO. Todos los los derechos reservados</div>
+        </div>
+
+        <div class="col-derecha">
+            <div class="contacto-footer">
+                +7711530249
+                <br>CONTACTO@JISTUDIO.COM
+            </div>
+            <p id="ultimo"></p>
+            Desarrollado por Estimado Cliente
+        </div>
 
     </footer>
 
     <!-- <img src="portada_movil.png" alt="portada" class="responsive"> -->
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
 </body>

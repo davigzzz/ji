@@ -1,0 +1,20 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.78 28.56">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 1.178px;
+      }
+    </style>
+  </defs>
+  <title>direccion-icon</title>
+  <g>
+    <g>
+      <line class="cls-1" x1="5.89" y1="28.56" x2="5.89" y2="11.191"/>
+      <rect class="cls-1" x="0.589" y="0.589" width="10.602" height="10.602"/>
+    </g>
+    <rect x="2.968" y="2.968" width="5.844" height="5.844"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.257 11.711">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 0.775px;
+      }
+    </style>
+  </defs>
+  <title>menu-xs</title>
+  <g>
+    <line class="cls-1" y1="5.638" x2="30.257" y2="5.638"/>
+    <line class="cls-1" x1="7.37" y1="11.323" x2="30.257" y2="11.323"/>
+    <line class="cls-1" x1="7.37" y1="0.388" x2="30.257" y2="0.388"/>
+  </g>
+</svg>
